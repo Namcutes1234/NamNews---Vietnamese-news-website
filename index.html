@@ -1,98 +1,243 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Namcutes1234 - My projects</title>
-  <style>
-        body { font-family: sans-serif; padding: 20px; }
-        .download-btn {
-        margin: 10px 0;
-        padding: 10px 20px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NamNews - Trang Tin Tức</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: "Segoe UI", sans-serif;
         }
-        .download-btn:hover {
-        background-color: #45a049;
+        h2 {
+            margin-bottom: 20px;
         }
-        .contact-section {
-        background-color: #f0f4ff;
-        padding: 20px;
-        border-radius: 10px;
-        max-width: 400px;
-        font-family: 'Segoe UI', sans-serif;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .contact-section p {
-        font-size: 18px;
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 10px;
-    }
-
-    .contact-section ul {
-        list-style: none;
-        padding-left: 0;
-    }
-
-    .contact-section li {
-        margin-bottom: 10px;
-        font-size: 16px;
-        color: #444;
-    }
-
-    .contact-section a {
-        color: #007BFF;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .contact-section a:hover {
-        text-decoration: underline;
-    }
-
-    .contact-section li::before {
-        content: "📎 ";
-    }
-  </style>
+        .card-title {
+            color: #004080;
+        }
+        .navbar-brand {
+            font-size: 150%;
+        }
+        .nav-link {
+            font-weight: 100;
+        }
+    </style>
 </head>
 <body>
-    <h2>📚 Namcutes1234 - My Projects: </h2>
-    <p>These are all the files. Click on the buttons to download.</p>
-    <p>This website is mine. DO NOT copy in all types.</p>
-    <button class="download-btn" onclick="downloadFromDrive('1guNTia7445rn7woVw2u2cmfZO_a90gqa', 'Morse_code_translator.cpp')">
-        Download Morse Code Translator.cpp
-    </button>
-    <button class="download-btn" onclick="downloadFromDrive('1tTLmsTljC4usmD0JkUWS4Ig3wEh5q0z1', 'Simple_calculator.cpp')">
-        Download Simple Calculator.cpp
-    </button>
-    <button class="download-btn" onclick="downloadFromDrive('1Rn5Hi6x2RY7ocaH28zPum16k_0wHNBA9', 'Windows386.cpp')">
-        Download Windows/386 v2.01.cpp
-    </button>
-    <script>
-        function downloadFromDrive(fileId, fileName) {
-            const directLink = `https://drive.google.com/uc?export=download&id=${fileId}`;
-            const a = document.createElement('a');
-            a.href = directLink;
-            a.download = fileName;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
-    </script>
-    <hr>
-    <div class="contact-section">
-        <p>📬 Contact me:</p>
-        <ul>
-            <li>Email: <a href="mailto:nam5a7nth@gmail.com">nam5a7nth@gmail.com</a></li>
-            <li>LQDOJ: <a href="https://lqdoj.edu.vn/user/NamTHCSNQ" target="_blank">NamTHCSNQ</a></li>
-            <li>Virtual Judge: <a href="https://vjudge.net/user/NamH" target="_blank">NamH</a></li>
-            <li>Scratch: <a href="https://scratch.mit.edu/users/Namcutes1234/" target="_blank">Namcutes1234</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">NamNews</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#tinNongCarousel">Tin Nóng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#thoisu">Thời sự</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#thethao">Thể thao</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#giaitri">Giải trí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#congnghe">Công nghệ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kinhte">Kinh tế</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="tinNongCarousel" class="carousel slide bg-warning text-dark py-4" data-bs-ride="carousel">
+        <div class="container">
+            <h2 class="mb-3">🔥 Tin Nóng</h2>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <h5>Miền Trung ứng phó bão số 7</h5>
+                    <p><em>05/10/2025</em> – Chính quyền các tỉnh ven biển đã triển khai phương án sơ tán dân.</p>
+                </div>
+                <div class="carousel-item">
+                    <h5>Giá vàng tăng mạnh đầu tháng 10</h5>
+                    <p><em>05/10/2025</em> – Giá vàng trong nước tăng 500.000 đồng/lượng so với cuối tháng trước.</p>
+                </div>
+                <div class="carousel-item">
+                    <h5>U23 Việt Nam vào chung kết SEA Games</h5>
+                    <p><em>04/10/2025</em> – Chiến thắng nghẹt thở trước Thái Lan đưa đội tuyển vào chung kết.</p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end mt-3">
+                <button class="btn btn-dark me-2" data-bs-target="#tinNongCarousel" data-bs-slide="prev">←
+                    Trước</button>
+                <button class="btn btn-dark" data-bs-target="#tinNongCarousel" data-bs-slide="next">Tiếp →</button>
+            </div>
+        </div>
     </div>
-    <hr>
-    <footer>Copyright (C) 2025 by Namcutes1234. All right reserved.</footer>
+    <div class="container my-5">
+        <div class="card shadow-lg border-0">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-mc6br95tmvh15a.webp"
+                        class="img-fluid rounded-start" alt="Hub Type-C 11-in-1" />
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">💻🔌 Hub Type-C 11-in-1 – Giải pháp kết nối toàn diện</h5>
+                        <p class="card-text">Biến laptop của bạn thành trung tâm kết nối mạnh mẽ: HDMI 4K, VGA, USB 3.0, SD/TF, LAN, và 3.5 Audio</p>
+                        <ul>
+                            <li>✅ Tương thích MacBook, Windows, Android</li>
+                            <li>✅ Hỗ trợ sạc nhanh PD 100W</li>
+                            <li>✅ Thiết kế nhôm nguyên khối, tản nhiệt tốt</li>
+                        </ul>
+                        <p class="card-text"><strong>Giá ưu đãi:</strong> <span class="text-danger fs-5">245.000₫</span></p>
+                        <a href="https://shopee.vn/product/696860216/42608468595?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkUm9yWVZMbGw0Q214S0d1TzNEZmUwNDIxWVVDU1pjNzNkWnZUekYycGpTaVJERHRsTHdiZWNqNGt3V01XZmQvRXFPUDVGMDBYNlJWVEgyV2NaYXNVVytLZVJyZlZoRjZMQkdYUVVwRzBJaEM&gad_source=1&gad_campaignid=22502562452&gbraid=0AAAAADPpQE71wRNtj3D8hvs6x8yDsS25S&gclid=Cj0KCQjwrojHBhDdARIsAJdEJ_epPMiyabmj0GwbeLESrC_oRhOBLQtKrNZ0wndBuQz8oZTJ5HI8Q2gaAiuCEALw_wcB" class="btn btn-success">🛒 Mua ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <section id="thoisu" class="mb-5">
+            <h2 class="text-primary">🗞️ Thời sự</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Hải Phòng đón làn sóng đầu tư mới</h5>
+                            <p><em>05/10/2025</em> – Nhiều doanh nghiệp nước ngoài đang tìm đến Hải Phòng để mở rộng sản xuất.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Thủ đô Hà Nội tổ chức lễ hội văn hóa dân gian</h5>
+                            <p><em>05/10/2025</em> – Hàng nghìn người dân tham gia lễ hội truyền thống tại Hồ Gươm.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">TP.HCM triển khai chiến dịch chống ngập</h5>
+                            <p><em>04/10/2025</em> – Hệ thống thoát nước mới được thử nghiệm tại quận Bình Thạnh.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="thethao" class="mb-5">
+            <h2 class="text-success">⚽ Thể thao</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Đội tuyển Việt Nam thắng đậm Campuchia</h5>
+                            <p><em>04/10/2025</em> – Trận đấu diễn ra tại sân Mỹ Đình với tỷ số 4-0 nghiêng về Việt Nam.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Messi ghi bàn thứ 800 trong sự nghiệp</h5>
+                            <p><em>05/10/2025</em> – Siêu sao Argentina lập kỷ lục mới trong trận đấu tại Miami.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="giaitri" class="mb-5">
+            <h2 class="text-danger">🎬 Giải trí</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Ca sĩ Mỹ Tâm ra mắt album mới</h5>
+                            <p><em>01/10/2025</em> – Album “Tâm 2025” đánh dấu sự trở lại đầy ấn tượng của nữ ca sĩ.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Liên hoan phim Việt Nam khai mạc tại Huế</h5>
+                            <p><em>04/10/2025</em> – Hơn 50 tác phẩm điện ảnh tham gia tranh giải Bông Sen Vàng.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Show truyền hình “Gương mặt thân quen” trở lại</h5>
+                            <p><em>03/10/2025</em> – Mùa mới với nhiều nghệ sĩ trẻ hứa hẹn tạo bất ngờ.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="congnghe" class="mb-5">
+            <h2 class="text-warning">💻 Công nghệ</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Ra mắt công nghệ AI mới tại TP.HCM</h5>
+                            <p><em>03/10/2025</em> – Hội thảo công nghệ thu hút hàng trăm chuyên gia trong và ngoài
+                                nước.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Hội thảo Blockchain toàn quốc tại Hà Nội</h5>
+                            <p><em>04/10/2025</em> – Các chuyên gia thảo luận về ứng dụng chuỗi khối trong tài chính.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Sinh viên Việt giành giải thưởng lập trình quốc tế</h5>
+                            <p><em>03/10/2025</em> – Nhóm sinh viên Đại học Bách Khoa lọt top 5 cuộc thi CodeX Global.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="kinhte" class="mb-5">
+            <h2 class="text-info">💼 Kinh tế</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Giá vàng tăng mạnh đầu tháng 10</h5>
+                            <p><em>01/10/2025</em> – Giá vàng trong nước tăng 500.000 đồng/lượng so với cuối tháng
+                                trước.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Xuất khẩu thủy sản tăng 12% trong quý III</h5>
+                            <p><em>05/10/2025</em> – Cá tra và tôm là hai mặt hàng chủ lực của Việt Nam.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Ngân hàng Nhà nước giữ nguyên lãi suất cơ bản</h5>
+                            <p><em>04/10/2025</em> – Chính sách tiền tệ ổn định giúp kiểm soát lạm phát.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        &copy; 2025 NamNews. All rights reserved.
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
